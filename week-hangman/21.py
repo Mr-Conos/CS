@@ -12,12 +12,12 @@ incorrect_guesses = []
 # loop
 while "*" in starting_phrase:
     # users can only have 6 incorrect guesses
+    user_guess = input("input a letter: ")
     if incorrect_guess >= 6:
         print("You are out of guesses :(")
         break # stops the loop
     while not (user_guess.isalpha() and len(user_guess) == 1): # makes sure the users input is only 1 character and is a letter
         user_guess = input("Please input a single letter: ").lower()
-    user_guess = input("input a letter: ")
     if user_guess in correct_phrase:
         print("the letter is in the phrase")
 
